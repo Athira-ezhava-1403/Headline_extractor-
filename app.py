@@ -4,12 +4,12 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 
-# Download required data safely
 @st.cache_resource
 def load_nlp_data():
+    import nltk
     nltk.download('punkt')
+    nltk.download('punkt_tab')  
     nltk.download('stopwords')
-
 load_nlp_data()
 
 # Initialize tools
